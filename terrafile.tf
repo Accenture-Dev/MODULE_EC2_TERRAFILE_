@@ -1,5 +1,5 @@
 provider "aws" {
-  region  = "us-east-1"
+  region  = "us-east-2"
 }
 
 module "ec2" {
@@ -24,7 +24,7 @@ module "ec2" {
   user_data = <<-EOF
               #!/bin/bash
               apt-get install nginx -y
-              echo "Welcome to First!" > /var/www/html/index.html
+              echo "Welcome to Second!" > /var/www/html/index.html
               apt-get update -y
               service nginx start
               EOF
