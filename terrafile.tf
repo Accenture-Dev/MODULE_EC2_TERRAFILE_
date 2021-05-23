@@ -5,22 +5,22 @@ provider "aws" {
 module "ec2" {
   source                        = "git@github.com:Accenture-Dev-private/module_ec2.git"
 # source                        = "git@github.com:Accenture-Dev/module_ec2?ref=CloudStartKit"
-  instance_count = ""
-  image_id = ""
+  instance_count = 2
+  image_id = "ami-0885b1f6bd170450c"
   name = ""
-  srvcountry = ""
-  srvclient = ""
+  srvcountry = "BR"
+  srvclient = "Accenture-CloudStartKit-PUB1"
   srvproduct = ""
   srvrole = ""
-  srvenvironment = ""
-  instance_type = ""
-#  user_data = ""
-  enable_ssm = 
-  key_name = ""
-  iam_instance_profile = ""
-  subnet_id = ""
-  vpc_security_group_ids = ""
-  monitoring = ""
+  srvenvironment = "production"
+  instance_type = "t2.micro"
+#  user_data = "heldouser0.1"
+  enable_ssm = true
+  key_name = "new_key"
+  iam_instance_profile = "SMrole"
+  subnet_id = "subnet-039fd9836be0de678"
+  vpc_security_group_ids = "sg-0f4c6a9de4fd3d7bc"
+  monitoring = true
   user_data = <<-EOF
               #!/bin/bash
               apt-get install nginx -y
