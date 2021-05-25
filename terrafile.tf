@@ -18,8 +18,8 @@ module "ec2" {
   enable_ssm = true
   key_name = "new_key"
   iam_instance_profile = "SMrole"
-  subnet_id = "subnet-099d5b7ea68374991"
-  vpc_security_group_ids = "sg-05af715c6f857d468"
+  subnet_id = "subnet-0b7a26e010189d050"
+  vpc_security_group_ids = "sg-0355db4a84bf000f4"
   monitoring = true
   user_data = <<-EOF
               #!/bin/bash
